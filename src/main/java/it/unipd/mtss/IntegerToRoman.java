@@ -7,26 +7,23 @@ package it.unipd.mtss;
 public class IntegerToRoman {
 
     public static String convert(int number) {
-        if (number <= 0 || number > 1000) {
+        if(number <= 0 || number > 1000) {
             throw new IllegalArgumentException("Valore fuori range");
         }
         
-        String result = "";
+        // REFACTORING: usiamo gli array per scalare l'algoritmo
+        int[] values = {10, 9, 5, 4, 1};
+        String[] symbols = {"X", "IX", "V", "IV", "I"};
         
-        // Nuova logica per 4, 5 e 6
-        while(number >= 5) {
-            result += "V";
-            number -= 5;
-        }
-        while(number >= 4) {
-            result += "IV";
-            number -= 4;
-        }
-        while(number >= 1) {
-            result += "I";
-            number -= 1;
+        StringBuilder result = new StringBuilder();
+        
+        for(int i = 0; i < values.length; i++) {
+            while(number >= values[i]) {
+                number -= values[i];
+                result.append(symbols[i]);
+            }
         }
         
-        return result;
+        return result.toString();
     }
 }

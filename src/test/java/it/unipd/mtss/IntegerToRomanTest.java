@@ -80,4 +80,44 @@ public class IntegerToRomanTest {
         // Assert
         assertEquals("VI", result);
     }
+
+    @Test
+    public void convert7ShouldReturnVII() {
+        // Arrange
+        int number = 7;
+        // Act
+        String result = IntegerToRoman.convert(number);
+        // Assert
+        assertEquals("VII", result);
+    }
+
+    @Test
+    public void convert8ShouldReturnVIII() {
+        // Arrange
+        int number = 8;
+        // Act
+        String result = IntegerToRoman.convert(number);
+        // Assert
+        assertEquals("VIII", result);
+    }
+
+    @Test
+    public void convert9ShouldReturnIX() {
+        // Arrange
+        int number = 9;
+        // Act
+        String result = IntegerToRoman.convert(number);
+        // Assert
+        assertEquals("IX", result);
+    }
+
+    @Test
+    public void convert10ShouldReturnX() {
+        // Arrange
+        int number = 10;
+        // Act
+        String result = IntegerToRoman.convert(number);
+        // Assert
+        assertEquals("X", result);
+    }
 }

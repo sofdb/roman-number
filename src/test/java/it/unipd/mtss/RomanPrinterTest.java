@@ -11,6 +11,7 @@ public class RomanPrinterTest {
 
     private static final String I_ASCII = " _____ \n|_   _|\n  | |  \n  | |  \n _| |_ \n|_____|\n";
     private static final String V_ASCII = " __      __\n \\ \\    / /\n  \\ \\  / / \n   \\ \\/ /  \n    \\  /   \n     \\/    \n";
+    private static final String X_ASCII = " __   __\n \\ \\ / /\n  \\ V / \n   > <  \n  / . \\ \n /_/ \\_\\\n";
 
     @Test
     public void print1ShouldReturnAsciiI() {
@@ -82,5 +83,45 @@ public class RomanPrinterTest {
 
         // Assert
         assertEquals(V_ASCII + I_ASCII, result);
+    }
+
+    @Test
+    public void print7ShouldReturnAsciiVII() {
+        // Arrange
+        int number = 7;
+        // Act
+        String result = RomanPrinter.print(number);
+        // Assert
+        assertEquals(V_ASCII + I_ASCII + I_ASCII, result);
+    }
+
+    @Test
+    public void print8ShouldReturnAsciiVIII() {
+        // Arrange
+        int number = 8;
+        // Act
+        String result = RomanPrinter.print(number);
+        // Assert
+        assertEquals(V_ASCII + I_ASCII + I_ASCII + I_ASCII, result);
+    }
+
+    @Test
+    public void print9ShouldReturnAsciiIX() {
+        // Arrange
+        int number = 9;
+        // Act
+        String result = RomanPrinter.print(number);
+        // Assert
+        assertEquals(I_ASCII + X_ASCII, result);
+    }
+
+    @Test
+    public void print10ShouldReturnAsciiX() {
+        // Arrange
+        int number = 10;
+        // Act
+        String result = RomanPrinter.print(number);
+        // Assert
+        assertEquals(X_ASCII, result);
     }
 }
