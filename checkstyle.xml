@@ -6,14 +6,7 @@
 <module name="Checker">
 
     <module name="Header">
-        <property name="header">
-            <![CDATA[
-////////////////////////////////////////////////////////////////////
-// SOFIA DE BLASI 2111014
-// GIOVANNI VISENTIN 2101064
-////////////////////////////////////////////////////////////////////
-            ]]>
-        </property>
+        <property name="headerFile" value="LICENSE.txt"/>
     </module>
 
     <module name="FileTabCharacter"/>

@@ -2,7 +2,6 @@
 // SOFIA DE BLASI 2111014
 // GIOVANNI VISENTIN 2101064
 ////////////////////////////////////////////////////////////////////
-
 package it.unipd.mtss;
 
 import java.util.HashMap;
