@@ -239,4 +239,32 @@ public class IntegerToRomanTest {
         String result = IntegerToRoman.convert(number);
         assertEquals("C", result);
     }
+
+    @Test
+    public void convert400ShouldReturnCD() {
+        int number = 400;
+        String result = IntegerToRoman.convert(number);
+        assertEquals("CD", result);
+    }
+
+    @Test
+    public void convert444ShouldReturnCDXLIV() {
+        int number = 444;
+        String result = IntegerToRoman.convert(number);
+        assertEquals("CDXLIV", result);
+    }
+
+    @Test
+    public void convert499ShouldReturnCDXCIX() {
+        int number = 499;
+        String result = IntegerToRoman.convert(number);
+        assertEquals("CDXCIX", result);
+    }
+
+    @Test
+    public void convert500ShouldReturnD() {
+        int number = 500;
+        String result = IntegerToRoman.convert(number);
+        assertEquals("D", result);
+    }
 }
