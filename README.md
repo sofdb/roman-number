@@ -1,0 +1,19 @@
+////////////////////////////////////////////////////////////////////
+// SOFIA DE BLASI 2111014
+// GIOVANNI VISENTIN 2101064
+////////////////////////////////////////////////////////////////////
+
+# Roman Number Converter
+
+Progetto per il corso *Metodi e Tecnologie per lo Sviluppo del Software*.
+
+Il software converte numeri arabi (1–1000) in numeri romani e permette la stampa
+ASCII art delle lettere romane.
+
+## Build Status
+
+![Build](https://github.com/sofdb/roman-number/actions/workflows/ci.yml/badge.svg)
+
+## Code Coverage
+
+[![Coverage Status](https://coveralls.io/repos/github/sofdb/roman-number/badge.svg?branch=main)](https://coveralls.io/github/sofdb/roman-number?branch=main)
