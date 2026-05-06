@@ -5,6 +5,7 @@
 package it.unipd.mtss;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThrows;
 import org.junit.Test;
 
 public class IntegerToRomanTest {
@@ -294,5 +295,23 @@ public class IntegerToRomanTest {
         int number = 1000;
         String result = IntegerToRoman.convert(number);
         assertEquals("M", result);
+    }
+
+    @Test
+    public void convert0ShouldThrowException() {
+        int number = 0;
+        assertThrows(IllegalArgumentException.class, () -> IntegerToRoman.convert(number));
+    }
+
+    @Test
+    public void convertNegativeShouldThrowException() {
+        int number = -5;
+        assertThrows(IllegalArgumentException.class, () -> IntegerToRoman.convert(number));
+    }
+
+    @Test
+    public void convertAbove1000ShouldThrowException() {
+        int number = 1001;
+        assertThrows(IllegalArgumentException.class, () -> IntegerToRoman.convert(number));
     }
 }

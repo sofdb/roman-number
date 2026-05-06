@@ -5,6 +5,7 @@
 package it.unipd.mtss;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThrows;
 import org.junit.Test;
 
 public class RomanPrinterTest {
@@ -246,5 +247,23 @@ public class RomanPrinterTest {
         int number = 1000;
         String result = RomanPrinter.print(number);
         assertEquals(M_ASCII, result);
+    }
+
+    @Test
+    public void print0ShouldThrowException() {
+        int number = 0;
+        assertThrows(IllegalArgumentException.class, () -> RomanPrinter.print(number));
+    }
+
+    @Test
+    public void printNegativeShouldThrowException() {
+        int number = -3;
+        assertThrows(IllegalArgumentException.class, () -> RomanPrinter.print(number));
+    }
+
+    @Test
+    public void printAbove1000ShouldThrowException() {
+        int number = 2000;
+        assertThrows(IllegalArgumentException.class, () -> RomanPrinter.print(number));
     }
 }
