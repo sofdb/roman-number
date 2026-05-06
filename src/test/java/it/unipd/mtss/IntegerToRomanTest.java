@@ -44,4 +44,40 @@ public class IntegerToRomanTest {
         // Assert
         assertEquals("III", result);
     }
+    
+    @Test
+    public void convert4ShouldReturnIV() {
+        // Arrange
+        int number = 4;
+
+        // Act
+        String result = IntegerToRoman.convert(number);
+
+        // Assert
+        assertEquals("IV", result);
+    }
+
+    @Test
+    public void convert5ShouldReturnV() {
+        // Arrange
+        int number = 5;
+
+        // Act
+        String result = IntegerToRoman.convert(number);
+
+        // Assert
+        assertEquals("V", result);
+    }
+
+    @Test
+    public void convert6ShouldReturnVI() {
+        // Arrange
+        int number = 6;
+
+        // Act
+        String result = IntegerToRoman.convert(number);
+
+        // Assert
+        assertEquals("VI", result);
+    }
 }

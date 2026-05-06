@@ -10,6 +10,7 @@ import org.junit.Test;
 public class RomanPrinterTest {
 
     private static final String I_ASCII = " _____ \n|_   _|\n  | |  \n  | |  \n _| |_ \n|_____|\n";
+    private static final String V_ASCII = " __      __\n \\ \\    / /\n  \\ \\  / / \n   \\ \\/ /  \n    \\  /   \n     \\/    \n";
 
     @Test
     public void print1ShouldReturnAsciiI() {
@@ -45,5 +46,41 @@ public class RomanPrinterTest {
 
         // Assert
         assertEquals(I_ASCII + I_ASCII + I_ASCII, result);
+    }
+
+    @Test
+    public void print4ShouldReturnAsciiIV() {
+        // Arrange
+        int number = 4;
+
+        // Act
+        String result = RomanPrinter.print(number);
+
+        // Assert
+        assertEquals(I_ASCII + V_ASCII, result);
+    }
+
+    @Test
+    public void print5ShouldReturnAsciiV() {
+        // Arrange
+        int number = 5;
+
+        // Act
+        String result = RomanPrinter.print(number);
+
+        // Assert
+        assertEquals(V_ASCII, result);
+    }
+
+    @Test
+    public void print6ShouldReturnAsciiVI() {
+        // Arrange
+        int number = 6;
+
+        // Act
+        String result = RomanPrinter.print(number);
+
+        // Assert
+        assertEquals(V_ASCII + I_ASCII, result);
     }
 }

@@ -12,14 +12,8 @@ public class RomanPrinter {
     private static final Map<Character, String> ASCII = new HashMap<>();
 
     static {
-        ASCII.put('I',
-        " _____ \n" +
-        "|_   _|\n" +
-        "  | |  \n" +
-        "  | |  \n" +
-        " _| |_ \n" +
-        "|_____|\n"
-        );
+        ASCII.put('I', " _____ \n|_   _|\n  | |  \n  | |  \n _| |_ \n|_____|\n");
+        ASCII.put('V', " __      __\n \\ \\    / /\n  \\ \\  / / \n   \\ \\/ /  \n    \\  /   \n     \\/    \n");
     }
 
     public static String print(int number) {
