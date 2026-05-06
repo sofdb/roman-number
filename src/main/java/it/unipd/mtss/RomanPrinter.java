@@ -18,6 +18,7 @@ public class RomanPrinter {
         ASCII.put('L', " __      \n| |      \n| |      \n| |      \n| |____  \n|______| \n");
         ASCII.put('C', "   _____ \n  / ____|\n | |     \n | |     \n | |____ \n  \\_____|\n");
         ASCII.put('D', " _____   \n|  __ \\  \n| |  | | \n| |  | | \n| |__| | \n|_____/  \n");
+        ASCII.put('M', " __  __  \n|  \\/  | \n| \\  / | \n| |\\/| | \n| |  | | \n|_|  |_| \n");
     }
 
     public static String print(int number) {

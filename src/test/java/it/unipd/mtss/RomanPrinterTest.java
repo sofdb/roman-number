@@ -15,6 +15,7 @@ public class RomanPrinterTest {
     private static final String L_ASCII = " __      \n| |      \n| |      \n| |      \n| |____  \n|______| \n";
     private static final String C_ASCII = "   _____ \n  / ____|\n | |     \n | |     \n | |____ \n  \\_____|\n";
     private static final String D_ASCII = " _____   \n|  __ \\  \n| |  | | \n| |  | | \n| |__| | \n|_____/  \n";
+    private static final String M_ASCII = " __  __  \n|  \\/  | \n| \\  / | \n| |\\/| | \n| |  | | \n|_|  |_| \n";
 
     @Test
     public void print1ShouldReturnAsciiI() {
@@ -224,5 +225,26 @@ public class RomanPrinterTest {
         int number = 500;
         String result = RomanPrinter.print(number);
         assertEquals(D_ASCII, result);
+    }
+
+    @Test
+    public void print900ShouldReturnAsciiCM() {
+        int number = 900;
+        String result = RomanPrinter.print(number);
+        assertEquals(C_ASCII + M_ASCII, result);
+    }
+
+    @Test
+    public void print999ShouldReturnAsciiCMXCIX() {
+        int number = 999;
+        String result = RomanPrinter.print(number);
+        assertEquals(C_ASCII + M_ASCII + X_ASCII + C_ASCII + I_ASCII + X_ASCII, result);
+    }
+
+    @Test
+    public void print1000ShouldReturnAsciiM() {
+        int number = 1000;
+        String result = RomanPrinter.print(number);
+        assertEquals(M_ASCII, result);
     }
 }
