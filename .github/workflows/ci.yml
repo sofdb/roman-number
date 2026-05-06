@@ -24,8 +24,16 @@ jobs:
       - name: Compile
         run: mvn -B compile --file pom.xml
 
-      - name: Test
+      - name: Test & Coverage
         run: mvn -B test --file pom.xml
 
-      - name: Package + Checkstyle
-        run: mvn -B package --file pom.xml
+      - name: Checkstyle
+        run: mvn -B checkstyle:check --file pom.xml
+
+      - name: Package
+        run: mvn -B package -DskipTests --file pom.xml
+
+      - name: Report coverage to Coveralls
+        env:
+          COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
+        run: mvn -B coveralls:report -DrepoToken=$COVERALLS_REPO_TOKEN
