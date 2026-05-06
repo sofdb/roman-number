@@ -218,4 +218,25 @@ public class IntegerToRomanTest {
         String result = IntegerToRoman.convert(number);
         assertEquals("L", result);
     }
+
+    @Test
+    public void convert90ShouldReturnXC() {
+        int number = 90;
+        String result = IntegerToRoman.convert(number);
+        assertEquals("XC", result);
+    }
+
+    @Test
+    public void convert99ShouldReturnXCIX() {
+        int number = 99;
+        String result = IntegerToRoman.convert(number);
+        assertEquals("XCIX", result);
+    }
+
+    @Test
+    public void convert100ShouldReturnC() {
+        int number = 100;
+        String result = IntegerToRoman.convert(number);
+        assertEquals("C", result);
+    }
 }
