@@ -12,7 +12,7 @@ ASCII art delle lettere romane.
 
 ## Build Status
 
-![Build](https://github.com/sofdb/roman-number/actions/workflows/build.yml/badge.svg)
+![Build](https://github.com/sofdb/roman-number/actions/workflows/ci.yml/badge.svg)
 
 ## Code Coverage
 
