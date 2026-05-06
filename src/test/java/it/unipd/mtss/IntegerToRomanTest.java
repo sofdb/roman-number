@@ -190,4 +190,32 @@ public class IntegerToRomanTest {
         String result = IntegerToRoman.convert(number);
         assertEquals("XX", result);
     }
+    
+    @Test
+    public void convert40ShouldReturnXL() {
+        int number = 40;
+        String result = IntegerToRoman.convert(number);
+        assertEquals("XL", result);
+    }
+
+    @Test
+    public void convert44ShouldReturnXLIV() {
+        int number = 44;
+        String result = IntegerToRoman.convert(number);
+        assertEquals("XLIV", result);
+    }
+
+    @Test
+    public void convert49ShouldReturnXLIX() {
+        int number = 49;
+        String result = IntegerToRoman.convert(number);
+        assertEquals("XLIX", result);
+    }
+
+    @Test
+    public void convert50ShouldReturnL() {
+        int number = 50;
+        String result = IntegerToRoman.convert(number);
+        assertEquals("L", result);
+    }
 }

@@ -11,9 +11,8 @@ public class IntegerToRoman {
             throw new IllegalArgumentException("Valore fuori range");
         }
         
-        // REFACTORING: usiamo gli array per scalare l'algoritmo
-        int[] values = {10, 9, 5, 4, 1};
-        String[] symbols = {"X", "IX", "V", "IV", "I"};
+        int[] values = {50, 40, 10, 9, 5, 4, 1};
+        String[] symbols = {"L", "XL", "X", "IX", "V", "IV", "I"};
         
         StringBuilder result = new StringBuilder();
         

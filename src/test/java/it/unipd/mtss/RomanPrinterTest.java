@@ -12,6 +12,7 @@ public class RomanPrinterTest {
     private static final String I_ASCII = " _____ \n|_   _|\n  | |  \n  | |  \n _| |_ \n|_____|\n";
     private static final String V_ASCII = " __      __\n \\ \\    / /\n  \\ \\  / / \n   \\ \\/ /  \n    \\  /   \n     \\/    \n";
     private static final String X_ASCII = " __   __\n \\ \\ / /\n  \\ V / \n   > <  \n  / . \\ \n /_/ \\_\\\n";
+    private static final String L_ASCII = " __      \n| |      \n| |      \n| |      \n| |____  \n|______| \n";
 
     @Test
     public void print1ShouldReturnAsciiI() {
@@ -158,5 +159,19 @@ public class RomanPrinterTest {
         int number = 20;
         String result = RomanPrinter.print(number);
         assertEquals(X_ASCII + X_ASCII, result);
+    }
+
+    @Test
+    public void print40ShouldReturnAsciiXL() {
+        int number = 40;
+        String result = RomanPrinter.print(number);
+        assertEquals(X_ASCII + L_ASCII, result);
+    }
+
+    @Test
+    public void print50ShouldReturnAsciiL() {
+        int number = 50;
+        String result = RomanPrinter.print(number);
+        assertEquals(L_ASCII, result);
     }
 }
