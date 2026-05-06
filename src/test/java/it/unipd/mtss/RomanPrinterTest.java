@@ -124,4 +124,39 @@ public class RomanPrinterTest {
         // Assert
         assertEquals(X_ASCII, result);
     }
+
+    @Test
+    public void print11ShouldReturnAsciiXI() {
+        int number = 11;
+        String result = RomanPrinter.print(number);
+        assertEquals(X_ASCII + I_ASCII, result);
+    }
+
+    @Test
+    public void print14ShouldReturnAsciiXIV() {
+        int number = 14;
+        String result = RomanPrinter.print(number);
+        assertEquals(X_ASCII + I_ASCII + V_ASCII, result);
+    }
+
+    @Test
+    public void print15ShouldReturnAsciiXV() {
+        int number = 15;
+        String result = RomanPrinter.print(number);
+        assertEquals(X_ASCII + V_ASCII, result);
+    }
+
+    @Test
+    public void print19ShouldReturnAsciiXIX() {
+        int number = 19;
+        String result = RomanPrinter.print(number);
+        assertEquals(X_ASCII + I_ASCII + X_ASCII, result);
+    }
+
+    @Test
+    public void print20ShouldReturnAsciiXX() {
+        int number = 20;
+        String result = RomanPrinter.print(number);
+        assertEquals(X_ASCII + X_ASCII, result);
+    }
 }

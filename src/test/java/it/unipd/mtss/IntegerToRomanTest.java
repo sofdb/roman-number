@@ -120,4 +120,74 @@ public class IntegerToRomanTest {
         // Assert
         assertEquals("X", result);
     }
+
+    @Test
+    public void convert11ShouldReturnXI() {
+        int number = 11;
+        String result = IntegerToRoman.convert(number);
+        assertEquals("XI", result);
+    }
+
+    @Test
+    public void convert12ShouldReturnXII() {
+        int number = 12;
+        String result = IntegerToRoman.convert(number);
+        assertEquals("XII", result);
+    }
+
+    @Test
+    public void convert13ShouldReturnXIII() {
+        int number = 13;
+        String result = IntegerToRoman.convert(number);
+        assertEquals("XIII", result);
+    }
+
+    @Test
+    public void convert14ShouldReturnXIV() {
+        int number = 14;
+        String result = IntegerToRoman.convert(number);
+        assertEquals("XIV", result);
+    }
+
+    @Test
+    public void convert15ShouldReturnXV() {
+        int number = 15;
+        String result = IntegerToRoman.convert(number);
+        assertEquals("XV", result);
+    }
+
+    @Test
+    public void convert16ShouldReturnXVI() {
+        int number = 16;
+        String result = IntegerToRoman.convert(number);
+        assertEquals("XVI", result);
+    }
+
+    @Test
+    public void convert17ShouldReturnXVII() {
+        int number = 17;
+        String result = IntegerToRoman.convert(number);
+        assertEquals("XVII", result);
+    }
+
+    @Test
+    public void convert18ShouldReturnXVIII() {
+        int number = 18;
+        String result = IntegerToRoman.convert(number);
+        assertEquals("XVIII", result);
+    }
+
+    @Test
+    public void convert19ShouldReturnXIX() {
+        int number = 19;
+        String result = IntegerToRoman.convert(number);
+        assertEquals("XIX", result);
+    }
+
+    @Test
+    public void convert20ShouldReturnXX() {
+        int number = 20;
+        String result = IntegerToRoman.convert(number);
+        assertEquals("XX", result);
+    }
 }
